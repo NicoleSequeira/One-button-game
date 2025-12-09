@@ -11,7 +11,7 @@
 :root {
     --neon-cyan: #00ffff;
     --neon-magenta: #ff00ff;
-    --neon-yellow: #ff00ff;
+    --neon-yellow: #ffff00;
     --neon-purple: #9d4edd;
     --bg-dark: #050510;
     --bg-space: #0a0a1a;
@@ -165,9 +165,9 @@ body {
 
 .neon-text-yellow {
     color: var(--neon-yellow);
-    text-shadow: 0 0 10px rgba(255, 0, 128, 0.8),
-        0 0 20px rgba(255, 0, 225, 0.6),
-        0 0 30px rgba(255, 0, 225, 0.6),
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.8),
+        0 0 20px rgba(255, 255, 0, 0.6),
+        0 0 30px rgba(255, 255, 0, 0.4);
 }
 
 /* Overlay Screens */
