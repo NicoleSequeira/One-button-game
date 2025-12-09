@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Boost - One-Button Space Game</title>
+    <link rel="shortcut icon" href="./Wireframe/rocket.png" type="image/x-icon">
+    <meta name="description"
+        content="A thrilling one-button arcade game. Boost your spacecraft through neon obstacles in this addictive space adventure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <!-- Background effects -->
+        <div class="scanlines"></div>
+        <div class="glow-circle glow-cyan"></div>
+        <div class="glow-circle glow-magenta"></div>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <div class="canvas-wrapper">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+                <!-- HUD -->
+                <div class="hud">
+                    <div class="hud-left">
+                        <div class="hud-label">Score</div>
+                        <div id="scoreDisplay" class="hud-value neon-text-cyan">0</div>
+                    </div>
+                    <div class="hud-center">
+                        <div class="hud-label">Difficulty</div>
+                        <div id="difficultyDisplay" class="hud-value-sm neon-text-yellow">EASY</div>
+                    </div>
+                    <div class="hud-right">
+                        <div class="hud-label">Best</div>
+                        <div id="highScoreDisplay" class="hud-value neon-text-magenta">0</div>
+                    </div>
+                </div>
+
+                <!-- Start Screen -->
+                <div id="startScreen" class="overlay">
+                    <h1 class="title neon-text-cyan float-animation">NEON BOOST</h1>
+                    <p class="subtitle">A One-Button Space Adventure</p>
+                    <div class="controls-hint">
+                        <div class="control-keys">
+                            <div class="key-box"><span class="key-text">SPACE</span></div>
+                            <span class="or-text">or</span>
+                            <div class="key-box"><span class="key-text">CLICK</span></div>
+                        </div>
+                        <p class="control-desc">to boost your ship</p>
+                    </div>
+                    <p class="start-prompt neon-text-yellow pulse-glow">PRESS TO START</p>
+                </div>
+
+                <!-- Game Over Screen -->
+                <div id="gameOverScreen" class="overlay hidden">
+                    <h2 class="game-over-title neon-text-magenta">GAME OVER</h2>
+                    <div class="final-scores">
+                        <div class="final-score-box">
+                            <div class="hud-label">Score</div>
+                            <div id="finalScore" class="final-score-value neon-text-cyan">0</div>
+                        </div>
+                        <div class="final-score-box">
+                            <div class="hud-label">Best</div>
+                            <div id="finalHighScore" class="final-score-value neon-text-magenta">0</div>
+                        </div>
+                    </div>
+                    <p id="newHighScore" class="new-high-score neon-text-yellow pulse-glow hidden">★ NEW HIGH SCORE ★
+                    </p>
+                    <p class="retry-prompt neon-text-cyan pulse-glow">PRESS TO RETRY</p>
+                </div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="instructions">
+                <div class="instruction-item">
+                    <span class="instruction-key">↑</span>
+                    <span>Boost Up</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="instruction-key">—</span>
+                    <span>Gravity Falls</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="instruction-color"></span>
+                    <span>Avoid Obstacles</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            Difficulty increases as you score • High score saved locally
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
